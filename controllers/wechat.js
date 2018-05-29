@@ -6,9 +6,9 @@ router.get('/', async ctx => {
     const {signature, nonce, timestamp, echostr} = ctx.request.query;
     var str = [timestamp,nonce,'abangReadBook'].sort().join("");
     if (signature == sha1(str)) {
-        res.body = true;
+        ctx.body = true;
     }
-    res.body = false;
+    ctx.body = false;
 })
 
 module.exports = router;
