@@ -1,12 +1,11 @@
 const Koa = require('koa');
 const Router = require( 'koa-router');
-
 const bodyParser =require( 'koa-bodyparser');
 
 const app = new Koa();
 
 const router = require('./controllers');
-
+require('./serverInit');
 
 app.use(bodyParser());
 app.use(async (ctx, next) => {
@@ -16,4 +15,4 @@ app.use(async (ctx, next) => {
     console.log(ctx.request.method, ctx.request.url ,'time: ', ms);
 })
 app.use(router.routes());
-app.listen(9090);
+app.listen(1234);
