@@ -12,7 +12,7 @@ app.use(async (ctx, next) => {
     const start = Date.now();
     await next();
     const ms = Date.now() - start;
-    console.log(ctx.request.method, ctx.request.url ,'time: ', ms);
+    console.log(ctx.request.method, ctx.request.url ,'time: ', ms, 'response: ', ctx.body);
 })
 app.use(router.routes());
 app.listen(1234,(err)=>{
