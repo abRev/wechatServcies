@@ -15,4 +15,10 @@ app.use(async (ctx, next) => {
     console.log(ctx.request.method, ctx.request.url ,'time: ', ms);
 })
 app.use(router.routes());
-app.listen(1234);
+app.listen(1234,(err)=>{
+    if(err){
+        console.log(err);
+    } else {
+        console.log('server start listen in 1234')
+    }
+});
