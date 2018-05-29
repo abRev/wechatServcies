@@ -1,0 +1,25 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "微信后台服务",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon --exec node app.js",
+    "start": "rm -rf build/** && "
+  },
+  "author": "abang",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-latest": "^6.24.1",
+    "co-wechat-api": "^3.5.0",
+    "eslint": "^4.19.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.17.5",
+    "sha1": "^1.1.1"
+  }
+}
