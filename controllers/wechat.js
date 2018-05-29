@@ -6,7 +6,7 @@ router.get('/', async ctx => {
     const {signature, nonce, timestamp, echostr} = ctx.request.query;
     var str = [timestamp,nonce,'abangReadBook'].sort().join("");
     if (signature == sha1(str)) {
-        ctx.body = true;
+        ctx.body = echostr;
     } else {
         ctx.body = false;
     }
