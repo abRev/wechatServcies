@@ -7,8 +7,9 @@ router.get('/', async ctx => {
     var str = [timestamp,nonce,'abangReadBook'].sort().join("");
     if (signature == sha1(str)) {
         ctx.body = true;
+    } else {
+        ctx.body = false;
     }
-    ctx.body = false;
 })
 
 module.exports = router;
